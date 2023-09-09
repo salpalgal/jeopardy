@@ -151,6 +151,7 @@ async function handleClick(evt) {
     let tar = evt.target
     let id = tar.getAttribute("id")
     let [clueId,catId] = id.split("-")
+    // console.log(categories)
     let clickedClue = categories[catId].clues[clueId]
     if(clickedClue.showing === null){
         clickedClue.showing = "question"
@@ -198,7 +199,7 @@ async function setupAndStart() {
         showLoadingView();
         await fillTable();
         hideLoadingView()
-        categories=[];
+        // categories=[];
     
     
 
